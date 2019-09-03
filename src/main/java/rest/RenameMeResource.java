@@ -2,7 +2,7 @@ package rest;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import entities.RenameMe;
+import entities.Movie;
 import utils.EMF_Creator;
 import facades.FacadeExample;
 import javax.persistence.EntityManagerFactory;
@@ -44,14 +44,14 @@ public class RenameMeResource {
 
     @POST
     @Consumes({MediaType.APPLICATION_JSON})
-    public void create(RenameMe entity) {
+    public void create(Movie entity) {
         throw new UnsupportedOperationException();
     }
     
     @PUT
     @Path("/{id}")
     @Consumes({MediaType.APPLICATION_JSON})
-    public void update(RenameMe entity, @PathParam("id") int id) {
+    public void update(Movie entity, @PathParam("id") int id) {
         throw new UnsupportedOperationException();
     }
 }

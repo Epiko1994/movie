@@ -9,7 +9,7 @@ import javax.persistence.NamedQuery;
 
 
 @Entity
-@NamedQuery(name = "RenameMe.deleteAllRows", query = "DELETE from RenameMe")
+@NamedQuery(name = "Movie.deleteAllRows", query = "DELETE from Movie")
 public class Movie implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -53,9 +53,5 @@ public class Movie implements Serializable {
     public void setDummyStr2(String dummyStr2) {
         this.dummyStr2 = dummyStr2;
     }
-    
-    
-    
-
-   
+      
 }
