@@ -60,8 +60,8 @@ public class FacadeExampleTest {
         try {
             em.getTransaction().begin();
             em.createNamedQuery("Movie.deleteAllRows").executeUpdate();
-            em.persist(new Movie("Some txt", "More text"));
-            em.persist(new Movie("aaa", "bbb"));
+            em.persist(new Movie("Some txt", 1234));
+            em.persist(new Movie("aaa", 1235));
 
             em.getTransaction().commit();
         } finally {

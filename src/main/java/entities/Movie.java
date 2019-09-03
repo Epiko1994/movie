@@ -16,10 +16,17 @@ public class Movie implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String title;
+    private int year;
     
     public Movie() {
     }
-        
+
+    public Movie(String title, int year) {
+        this.title = title;
+        this.year = year;
+    }
+    
     public Long getId() {
         return id;
     }
@@ -27,31 +34,21 @@ public class Movie implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
     
-    // TODO, delete this class, or rename to an Entity class that makes sense for what you are about to do
-    // Delete EVERYTHING below if you decide to use this class, it's dummy data used for the initial demo
-    private String dummyStr1;
-    private String dummyStr2;
-
-    public Movie(String dummyStr1, String dummyStr2) {
-        this.dummyStr1 = dummyStr1;
-        this.dummyStr2 = dummyStr2;
+    public int getYear() {
+        return year;
     }
 
-    public String getDummyStr1() {
-        return dummyStr1;
+    public void setYear(int year) {
+        this.year = year;
     }
-
-    public void setDummyStr1(String dummyStr1) {
-        this.dummyStr1 = dummyStr1;
-    }
-
-    public String getDummyStr2() {
-        return dummyStr2;
-    }
-
-    public void setDummyStr2(String dummyStr2) {
-        this.dummyStr2 = dummyStr2;
-    }
-      
+   
 }

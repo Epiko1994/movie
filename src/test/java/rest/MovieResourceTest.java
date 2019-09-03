@@ -24,7 +24,7 @@ import utils.EMF_Creator.Strategy;
 
 //Uncomment the line below, to temporarily disable this test
 //@Disabled
-public class RenameMeResourceTest {
+public class MovieResourceTest {
 
     private static final int SERVER_PORT = 7777;
     private static final String SERVER_URL = "http://localhost/api";
@@ -71,8 +71,8 @@ public class RenameMeResourceTest {
         try {
             em.getTransaction().begin();
             em.createNamedQuery("Movie.deleteAllRows").executeUpdate();
-            em.persist(new Movie("Some txt","More text"));
-            em.persist(new Movie("aaa","bbb"));
+            em.persist(new Movie("Some txt",1234));
+            em.persist(new Movie("aaa",1235));
            
             em.getTransaction().commit();
         } finally {
